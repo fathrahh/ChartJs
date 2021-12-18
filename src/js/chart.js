@@ -113,7 +113,6 @@ const barChart = (ctx) => {
     return new Chart(ctx, config);
 }
 
-
 //element
 const ctx = document.getElementById('myChart');
 const ctx1 = document.getElementById('myChart1');

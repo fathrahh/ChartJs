@@ -56,7 +56,7 @@
         <main class="h-screen flex flex-col justify-between flex-1 overflow-scroll overflow-x-hidden bg-section">
             <header
                 class="sticky z-10 top-0 flex items-center justify-between bg-navbar px-8 py-7 shadow-lg lg:text-2xl">
-                <span class="-translate-x-1 text-2xl">Informasi</span>
+                <span class="-translate-x-1 text-2xl">Hasil Review</span>
                 <button id="btnHamburger" class="space-y-1 lg:hidden cursor-pointer transition-transform">
                     <div class="line-1 h-1 w-6 bg-white"></div>
                     <div class="line-2 h-1 w-6 bg-white"></div>
@@ -75,7 +75,60 @@
                 </div>
             </header>
             <!-- Put Content Here -->
-            <section>Hellow</section>
+            <section class="p-8 space-y-6">
+                <header>
+                    <h3 class="inline-block">Status</h3>
+                    <button class="bg-success text-white font-semibold"> Terbuka</button>
+                </header>
+                <div class="overflow-x-scroll md:overflow-x-hidden">
+                    <table class="w-full">
+                        <tr class="w-full border-b-2 border-white border-solid">
+                            <th>No.</th>
+                            <th>Tahun</th>
+                            <th>Bidang</th>
+                            <th>Judul</th>
+                            <th>Dokumen</th>
+                            <th>Penilaian</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>2021</td>
+                            <td>Energi Terbarukan</td>
+                            <td>ANALISIS APLIKASI ENERGI TERBARUKAN PADA PERMINTAAN DAN PENYEDIAAN ENERGI LISTRIK SERTA
+                                PENURUNAN EMISI DI JAWA TIMUR</td>
+                            <td><i class="fas fa-file-pdf text-red-700 bg-white scale-150 mx-auto"></i></td>
+                            <td>
+                                <div class="flex flex-col justify-evenly h-full items-center text-center">
+                                    <span>Nilai 0.00</span>
+                                    <div class="text-danger">
+                                        <p class="leading-none font-semibold">Komponen dinilai</p>
+                                        <span>15 dari 15</span>
+                                    </div>
+                                    <button class="bg-blue-custom">penilian</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>2021</td>
+                            <td>Energi Terbarukan</td>
+                            <td>ANALISIS APLIKASI ENERGI TERBARUKAN PADA PERMINTAAN DAN PENYEDIAAN ENERGI LISTRIK SERTA
+                                PENURUNAN EMISI DI JAWA TIMUR</td>
+                            <td><i class="fas fa-file-pdf text-red-700 bg-white scale-150 mx-auto"></i></td>
+                            <td>
+                                <div class="flex flex-col justify-evenly h-full items-center text-center">
+                                    <span>Nilai 80.00</span>
+                                    <div class="text-success">
+                                        <p class="leading-none font-semibold">Komponen dinilai</p>
+                                        <span>15 dari 15</span>
+                                    </div>
+                                    <button class="bg-blue-custom">penilian</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
             <!-- footer -->
             <footer class="bg-gradient-to-r from-gray-500 to-gray-600 h-auto">
                 <div class="flex flex-col md:flex-row justify-center align-center bg-slate-400 gap-5 h-auto">
@@ -119,7 +172,8 @@
             </footer>
         </main>
     </div>
-    <script src="../node_modules/chart.js/dist/chart.min.js"></script>
+
+    <!-- Script -->
     <script src="../src/js/templateBase.js"></script>
 </body>
 
