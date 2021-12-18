@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../tailwindcss/output.css">
+    <script defer src="../node_modules/@fortawesome/fontawesome-free/js/fontawesome.js"></script>
+    <script defer src="../node_modules/@fortawesome/fontawesome-free/js/solid.js"></script>
+    <script defer src="../node_modules/@fortawesome/fontawesome-free/js/brands.js"></script>
+</head>
+
+<body class="box-border overflow-hidden">
+    <div class="grid grid-cols-12 text-white h-full">
+        <aside class="hidden lg:block lg:col-span-2 bg-aside">
+            <div class="relative p-6 ">
+                <img class="w-40 hidden mb-3 lg:block" src="./img/brin-logo.png" alt="BRIN LOGO">
+                <span class="absolute text-slate-500 font-bold bottom-0 right-5">Dashboard BRIN</span>
+            </div>
+            <div class="">
+                <div></div>
+            </div>
+        </aside>
+        <main class="col-span-12 lg:col-span-10 h-screen overflow-scroll overflow-x-hidden  bg-section">
+            <header
+                class="sticky z-50 top-0 flex items-center justify-between bg-navbar px-8 py-7 shadow-lg lg:text-2xl w-full">
+                <img class="w-12 lg:hidden" src="./img/brin-logo-mobile.png" alt="aasd">
+                <span class="-translate-x-1 text-base lg:text-2xl">Informasi</span>
+                <div id="btnHamburger" class="space-y-1 lg:hidden cursor-pointer transition-transform">
+                    <div class="line-1 h-1 w-6 bg-white"></div>
+                    <div class="line-2 h-1 w-6 bg-white"></div>
+                    <div class="line-3 h-1 w-6 bg-white"></div>
+                </div>
+                <div class="hidden lg:flex lg:items-center lg:gap-5">
+                    <i class="fas fa-bell text-white cursor-pointer"></i>
+                    <div class="w-0.5 h-7 bg-white rounded-sm"></div>
+                    <span class="font-semibold text-sm">Jones Ferdinand</span>
+                    <img class="w-10 rounded-full p-0.5 border-2" src=" ./img/profile.jpg" alt="profile">
+                </div>
+            </header>
+            <section class="flex flex-col justify-center overflow-visible p-8">
+                <!--Section 1 Card begin -->
+                <section class="flex items-center justify-evenly flex-col lg:flex-row  gap-5 p-3 w-full">
+                    <div
+                        class="flex justify-around lg:grid lg:grid-cols-8 lg:w-80 lg:h-40 w-full h-48 bg-aside rounded-xl py-6 px-2 gap-10">
+                        <div class="lg:col-span-5 text-center lg:space-y-6 space-y-11">
+                            <span class="text-slate-400 font-bold flex-grow-3">Total Proposal Masuk</span>
+                            <div class="text-2xl text-slate-400 font-semibold break-words">
+                                <span>10.500</span>
+                                <p class="text-xs tracking-wide">Proposal</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col lg:col-span-2 items-center space-y-3 lg:space-y-1">
+                            <span class="text-emerald-500">+21%</span>
+                            <div class="lg:w-20 w-24">
+                                <canvas id="myChart" width="400" height="400"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="flex justify-around lg:grid lg:grid-cols-8 lg:w-80 lg:h-40 w-full h-48 bg-aside rounded-xl py-6 px-3 gap-10">
+                        <div class="col-span-5 text-center lg:space-y-6 space-y-11">
+                            <span class="text-slate-400 font-bold flex-grow-3">Total Proposal Masuk</span>
+                            <div class="text-2xl text-slate-400 font-semibold break-words">
+                                <span>10.500</span>
+                                <p class="text-xs tracking-wide">Proposal</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col col-span-2 items-center space-y-3 lg:space-y-1">
+                            <span class="text-emerald-500">+41%</span>
+                            <div class="lg:w-20 w-24">
+                                <canvas id="myChart1" width="400" height="400"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="flex justify-around lg:grid lg:grid-cols-8 lg:w-80 lg:h-40 w-full h-48 bg-aside rounded-xl py-6 px-2 gap-10">
+                        <div class="col-span-5 text-center lg:space-y-6 space-y-11">
+                            <span class="text-slate-400 font-bold flex-grow-3">Total Proposal Masuk</span>
+                            <div class="text-2xl text-slate-400 font-semibold break-words">
+                                <span>10.500</span>
+                                <p class="text-xs tracking-wide">Proposal</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col col-span-2 items-center space-y-3 lg:space-y-1">
+                            <span class="text-emerald-500">+21%</span>
+                            <div class="lg:w-20 w-24">
+                                <canvas id="myChart2" width="400" height="400"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Card End -->
+
+                <!-- Section 2 -->
+                <section class="text-white font-semibold py-5 px-3  ">
+                    <div
+                        class="flex flex-col items-center gap-3 md:flex-row md:justify-between px-1 py-4 md:items-center w-full">
+                        <h1>Total Proposal</h1>
+                        <div class="flex justify-between items-center md:block md:space-x-3 w-full md:w-auto">
+                            <span>Provisions Month</span>
+                            <input class="w-36 bg-transparent border-2 p-0.5 rounded-lg" type="date">
+                        </div>
+                    </div>
+                    <!-- Bar Chart start -->
+                    <div class="bg-aside p-4 rounded-md">
+                        <header class="flex justify-between items-center px-1">
+                            <div>
+                                <h3 class="text-gray-300">Persebaran Per Bidang</h3>
+                                <small class="text-xs text-gray-500">Total</small>
+                            </div>
+                            <i class="fas fa-ellipsis-h"></i>
+                        </header>
+                        <main class="p-6 ">
+                            <canvas id="barChart" width="800" height="300"></canvas anvas>
+                        </main>
+                    </div>
+                </section>
+
+                <!-- Section 3-->
+                <section class="flex flex-col md:grid md:grid-cols-9 p-4 md:gap-24">
+                    <div class="md:col-span-4 font-semibold">
+                        <h1>Penyerahan Dana Penelitian</h1>
+                        <div class="-mt-10 w-80 h-auto">
+                            <canvas id="myChart3" width="400" height="400"></canvas>
+                        </div>
+                    </div>
+                    <div class="md:col-span-5  font-semibold">
+                        <h1>Pelaksanaan Penelitian</h1>
+                        <div class="flex items-center my-4 lg:mt-16">
+                            <h1 class="text-2xl font-bold">9.500</h1>
+                            <small class="text-gray-500 text-xs ml-2">Total</small>
+                        </div>
+                        <!-- progress Bar -->
+                        <div
+                            class="ml-5  progress-bar mt-3 w-4/5 h-5 rounded-full relative overflow-hidden transition-all will-change-transform shadow-lg bg-indigo-800">
+
+                            <div class="absolute h-full w-4/5 bg-indigo-500 rounded-full "></div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 4 -->
+                <section class="font-semibold py-5 px-3">
+                    <div class="bg-aside p-4 rounded-md py-12">
+                        <header class="text-center px-1">
+                            <h1 class="text-white text-3xl md:w-3/12 font-bold mx-auto">Proses Pengajuan Penelitian</h1>
+                        </header>
+                        <main class="flex flex-col items-center space-y-6 md:flex-row justify-evenly p-6 mt-8">
+                            <div class="text-center flex justify-center items-center flex-col w-36 space-y-5">
+                                <img src="./img/upload (1) 1.png" alt="upload">
+                                <small class="text-zinc-500">Upload Proposal Pengajuan</small>
+                            </div>
+                            <div class="text-center flex justify-center items-center flex-col w-36 space-y-5">
+                                <img src="./img/review 1.png" alt="upload">
+                                <small class="text-zinc-500">Upload Proposal Pengajuan</small>
+                            </div>
+                            <div class="text-center flex justify-center items-center flex-col w-36 space-y-5">
+                                <img src="./img/review (1) 1.png" alt="upload">
+                                <small class="text-zinc-500">Upload Proposal Pengajuan</small>
+                            </div>
+                        </main>
+                    </div>
+                </section>
+
+                <!-- section 5 Pengumuman-->
+                <section class="text-center p-4">
+                    <h1 class="text-3xl font-bold mb-7">Pengumuman</h1>
+                    <!-- cards -->
+                    <div class="space-y-8">
+                        <div class="bg-aside rounded-xl w-full py-10 px-5 text-left space-y-4">
+                            <div class="flex gap-6 items-center">
+                                <div class="w-24 flex justify-between font-bold">
+                                    <span>Nomor </span>
+                                    <span>:</span>
+                                </div>
+                                <span>01.11.2018</span>
+                            </div>
+                            <div class="flex gap-6 items-center">
+                                <div class="w-24 flex justify-between font-bold">
+                                    <span>Tentang </span>
+                                    <span>:</span>
+                                </div>
+                                <a href="#">
+                                    <i class="fas fa-file-pdf text-red-700 bg-white mx-1"></i>
+                                    Permenristekdikti Nomor 40 Tahu 2018 Tentang Program Prioritas Riset Nasional
+                                </a>
+                            </div>
+                        </div>
+                        <div class="bg-aside rounded-xl w-full py-10 px-5 text-left space-y-4">
+                            <div class="flex gap-6 items-center">
+                                <div class="w-24 flex justify-between font-bold">
+                                    <span>Nomor </span>
+                                    <span>:</span>
+                                </div>
+                                <span>01.11.2018</span>
+                            </div>
+                            <div class="flex gap-6 items-center">
+                                <div class="w-24 flex justify-between font-bold">
+                                    <span>Tentang </span>
+                                    <span>:</span>
+                                </div>
+                                <a href="#">
+                                    <i class="fas fa-file-pdf text-red-700 bg-white mx-1"></i>
+                                    Permenristekdikti Nomor 40 Tahu 2018 Tentang Program Prioritas Riset Nasional
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- cards end -->
+                </section>
+
+            </section>
+            <!-- footer -->
+            <footer class="bg-gradient-to-r from-gray-500 to-gray-600 h-auto">
+                <div class="flex flex-col md:flex-row justify-center align-center bg-slate-400 gap-5 h-auto">
+                    <div class="flex flex-col justify-start gap-10 p-8">
+                        <img class="w-32" src="./img/brin-logo.png" alt="logo BRIN">
+                        <div class="flex md:flex-col gap-6">
+                            <div>
+                                <h5>Hubungi Kami</h5>
+                                <small class="mt-1">(021)3162222</small>
+                                <small class="block">Rakornasriset@ristekbrin.go.id</small>
+                            </div>
+                            <div class="">
+                                <h5>Social Media</h5>
+                                <div class="flex gap-2 mt-1">
+                                    <div class="w-9 h-9 rounded-full bg-gray-400 flex justify-center items-center">
+                                        <i class="max-w-full fab fa-instagram"></i>
+                                    </div>
+                                    <div class="w-9 h-9 rounded-full bg-gray-400 flex justify-center items-center">
+                                        <i class="max-w-full fab fa-facebook-f"></i>
+                                    </div>
+                                    <div class="w-9 h-9 rounded-full bg-gray-400 flex justify-center items-center">
+                                        <i class="max-w-full fab fa-twitter"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-10 justify-start p-8 md:w-1/3">
+                        <div class="flex md:flex-col gap-10">
+                            <h5>Temukan Kami</h5>
+                            <p class="w-10/12">Gedung BJ Habibie Lantai 19-20, Jalan MH Thamrin No.8 , Jakarta 10340</p>
+                        </div>
+                        <img class="rounded-xl "
+                            src="https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/pin-s+e62828(106.823,-6.1849)/106.823,-6.1849,16,0/300x200?access_token=pk.eyJ1IjoiaWpvcmRldiIsImEiOiJja3hhYjIwaGozd2Z6MnRsYWExbXNlNTZ1In0.2W6qVBAwUCQ0ItnvfUs-NQ"
+                            alt="BRIN maps">
+                    </div>
+                </div>
+                <div class="h-16 bg-gray-800 flex justify-center items-center">
+                    <span class="">2021-All Rights Reserved BRIN</span>
+                </div>
+            </footer>
+        </main>
+    </div>
+    <script src="../node_modules/chart.js/dist/chart.min.js"></script>
+    <script src="../src/js/script.js"></script>
+</body>
+
+</html>
