@@ -1,5 +1,13 @@
 module.exports = {
-  content: ["./public/index.html", "./public/template.html", "./public/reviewPage.html", "./public/hasilPage.html"],
+  content: ["./public/index.html",
+    "./public/template.html",
+    "./public/reviewPage.html",
+    "./public/hasilPage.html",
+    "./public/login.html",
+    "./public/register.html",
+    "./public/pengajuan.html",
+    "./public/pascaPengajuan.html",
+  ],
   theme: {
     extend: {
       colors: {
